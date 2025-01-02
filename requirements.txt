@@ -2,5 +2,4 @@ streamlit==1.36.0
 pyyaml
 streamlit_authenticator
 plotly.express
-git+https://github.com/streamlit/gsheets-connection
 st-gsheets-connection
