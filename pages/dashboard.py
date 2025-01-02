@@ -23,8 +23,6 @@ if st.sidebar.button('Atualizar Planilha'):
     st.cache_data.clear()
     st.rerun()
 
-
-
 def plot_pie_chart(progresso, title, col, key):
     if progresso > 100:
         fig = px.pie(
@@ -496,5 +494,3 @@ if aba_selecionada == "Resumo OKR's 2024":
         st.plotly_chart(fig_daf)
 
 
-else:
-    st.write("Uai só")

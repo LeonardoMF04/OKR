@@ -53,10 +53,10 @@ if __name__ == "__main__":
         default=True
     )
     Dashboard = st.Page(page="pages/dashboard.py",
-                        title="Dashboard")
-    Membros = st.Page(page="pages/membros.py", title="Membros")
-    Projetos = st.Page(page="pages/Projetos.py", title="Projetos")
-    PortalBJ = st.Page(page="pages/PortalBJ.py", title="PortlBJ")
+                        title="Dashboard", icon='⚡')
+    Membros = st.Page(page="pages/membros.py", title="Membros", icon='🪪')
+    Projetos = st.Page(page="pages/Projetos.py", title="Projetos", icon='💵')
+    PortalBJ = st.Page(page="pages/PortalBJ.py", title="PortlBJ", icon='📊')
 
     pg = st.navigation(pages=[Home, Dashboard, Membros, Projetos, PortalBJ])
     pg.run()
