@@ -1,0 +1,5 @@
+streamlit
+yaml
+streamlit_authenticator
+plotly.express
+git+https://github.com/streamlit/gsheets-connection

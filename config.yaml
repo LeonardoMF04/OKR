@@ -1,0 +1,136 @@
+credentials:
+  usernames:
+    leonardomf:
+      email: leonardomf@ejeet.com.br
+      logged_in: False
+      name: Leonardo Moreto Francisco
+      password: "17981213014"
+    gabrielfbj:
+      email: gabrielfbj@ejeet.com.br
+      logged_in: False
+      name: Gabriel Francisco Barbosa Júnior
+      password: "16992268036"
+    amandacp:
+      email: amandacp@ejeet.com.br
+      logged_in: False
+      name: Amanda Christine de Paula
+      password: "34992243411"
+    andrew:
+      email: andrew@ejeet.com.br
+      logged_in: False
+      name: André Wu
+      password: "64996637798"
+    beatrizc:
+      email: beatrizc@ejeet.com
+      logged_in: False
+      name: Beatriz Caetana Duran
+      password: "11942896115"
+    davir:
+      email: davir@ejeet.com.br
+      logged_in: False
+      name: Davi Rodrigues Amorim
+      password: "16982487013"
+    felipea:
+      email: felipea@ejeet.com.br
+      logged_in: False
+      name: Felipe Alves Paiva
+      password: "34997649519"
+    guilhermea:
+      email: guilhermea@ejeet.com.br
+      logged_in: False
+      name: Guilherme Augusto Nascimento
+      password: "19971553225"
+    italoh:
+      email: italoh@ejeet.com.br
+      logged_in: False
+      name: Italo Henrique Souza da Silva
+      password: "16994354499"
+    janfersons:
+      email: janfersons@ejeet.com.br
+      logged_in: False
+      name: Janferson Siqueira Silva
+      password: "35999916643"
+    jessycalms:
+      email: jessycalms@ejeet.com.br
+      logged_in: False
+      name: Jéssyca Leopoldo de Melo Souto
+      password: "11940615794"
+    joaog:
+      email: joaog@ejeet.co.br
+      logged_in: False
+      name: João Gabriel Aleixo Lucio
+      password: "16988658425"
+    joaopg:
+      email: joaopg@ejeet.com.br
+      logged_in: False
+      name: João Paulo Provinciano Gomes
+      password: "11973408977"
+    joaovcf:
+      email: joaovcf@ejeet.com.br
+      logged_in: False
+      name: João Victor Cesario Fernandes
+      password: "16991432912"
+    kauanm:
+      email: kauanm@ejeet.com.br
+      logged_in: False
+      name: Kauan Marques Da Conceição
+      password: "34984325835"
+    kleytonv:
+      email: kleytonv@ejeet.com.br
+      logged_in: False
+      name: Kleyton Vinicius Rodrigues Oliveira Silva
+      password: "16981076305"
+    lucasbp:
+      email: lucasbp@ejeet.com.br
+      logged_in: False
+      name: Lucas Bispo Parpinelli
+      password: "18996336190"
+    lucase:
+      email: lucase@ejeet.com.br
+      logged_in: False
+      name: Lucas Estevan Silva
+      password: "34984008933"
+    luisf:
+      email: luisf@ejeet.com.br
+      logged_in: False
+      name: Luís Felipe Fávaro Silva
+      password: "34999974813"
+    marcelon:
+      email: marcelon@ejeet.com.br
+      logged_in: False
+      name: Marcelo Nascimento Eduardo
+      password: "16996244265"
+    mateusf:
+      email: mateusf@ejeet.com.br
+      logged_in: False
+      name: Mateus Felipe Marcelino de Sousa
+      password: "34988501845"
+    pedroapb:
+      email: pedroapb@ejeet.com.br
+      logged_in: False
+      name: Pedro Arthur Pereira Borges
+      password: "34998008058"
+    pedroaa:
+      email: pedroaa@ejeet.com.br
+      logged_in: False
+      name: Pedro Augusto de Almeida
+      password: "34999883976"
+    pedroes:
+      email: pedroes@ejeet.com.br
+      logged_in: False
+      name: Pedro Enrico Scorsato
+      password: "16994052656"
+    rafaelm:
+      email: rafaelm@ejeet.com.br
+      logged_in: False
+      name: Rafael Marçal Alves
+      password: "34997787251"
+    yurif:
+      email: yurif@ejeet.com.br
+      logged_in: False
+      name: Yuri França Pereira
+      password: "64999385575"
+cookie:
+  expiry_days: 1
+  key: some_signature_key
+  name: some_cookie_name
