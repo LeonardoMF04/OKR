@@ -9,13 +9,11 @@ if not st.session_state.authentication_status:
 # Conecta ao Google Sheets
 conn = st.connection("gsheets", type=GSheetsConnection)
 # Adiciona uma barra lateral para selecionar a aba
-abas = ["Resumo OKR's", "OKR 1", "OKR 2", "OKR 3", "OKR 4"]
+abas = ["Resumo OKR's 2024", "OKR 1", "OKR 2", "OKR 3", "OKR 4"]
 aba_selecionada = st.sidebar.selectbox("Selecione a OKR", abas)
 
 # Carrega os dados da aba selecionada
 df = conn.read(worksheet=aba_selecionada)
-st.dataframe(df)
-
 
 st.markdown("<h1 style='text-align: center;'>Dashboard de OKR</h1>",
             unsafe_allow_html=True)
@@ -417,16 +415,16 @@ if aba_selecionada in ["OKR 1", "OKR 2", "OKR 3", "OKR 4"]:
     st.markdown(
         f"<h3 style='text-align: center;'>{temp:.2f}% de sucesso</h3>", unsafe_allow_html=True)
 
-if aba_selecionada == "Resumo OKR's":
+if aba_selecionada == "Resumo OKR's 2024":
 
     x = ["OKR 1", "OKR 2", "OKR 3", "OKR 4"]
-    med_dpres = df.iloc[6][7:11]
-    med_vp = df.iloc[11][7:11]
-    med_proj = df.iloc[16][7:11]
-    med_negocios = df.iloc[21][7:11]
-    med_daf = df.iloc[26][7:11]
-
-    med_okr = df.iloc[3][7:11]
+    med_dpres = df.iloc[4][5:11].astype(str)
+    
+    med_vp = df.iloc[8][5:11].astype(str)
+    med_proj = df.iloc[12][5:11].astype(str)
+    med_negocios = df.iloc[16][5:11].astype(str)
+    med_daf = df.iloc[20][5:11].astype(str)
+    med_okr = df.iloc[1][5:11].astype(str)
 
     fig_med_okr = px.bar(
         x=x,

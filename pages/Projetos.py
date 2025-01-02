@@ -32,23 +32,15 @@ df_resumido = df.iloc[1:, [df.columns.get_loc(
 st.dataframe(df_resumido, use_container_width=True)
 
 
-numero_ao_lado_meta = df.iloc[4][15]
-numero_ao_lado_total = df.iloc[5][15]
+numero_ao_lado_meta = float(df.iloc[4][15])
+numero_ao_lado_total = float(df.iloc[5][15])
 
-# Calculate the progress towards the annual goal
-meta_do_ano = float(str(numero_ao_lado_meta).replace(
-    'R$', '').replace('.', '').replace(',', '.').strip())
-total_obtido = float(str(numero_ao_lado_total).replace(
-    'R$', '').replace('.', '').replace(',', '.').strip())
-progresso_meta = (total_obtido / meta_do_ano) * 100
-
+progresso_meta = (numero_ao_lado_total / numero_ao_lado_meta) * 100
 st.markdown("<h2 style='text-align: center;'>Progresso da Meta do Ano</h2>",
             unsafe_allow_html=True)
 st.progress(min(progresso_meta, 100) / 100.0)
 
 if progresso_meta > 100:
-    st.markdown(f"<h3 style='text-align: center;'>{
-                progresso_meta:.2f}% de sucesso (excedido)</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center;'>{progresso_meta:.2f}% de sucesso (excedido)</h3>", unsafe_allow_html=True)
 else:
-    st.markdown(f"<h3 style='text-align: center;'>{
-                progresso_meta:.2f}% de sucesso</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center;'>{progresso_meta:.2f}% de sucesso</h3>", unsafe_allow_html=True)
