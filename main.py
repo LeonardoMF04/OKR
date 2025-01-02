@@ -7,7 +7,7 @@ from yaml import SafeLoader
 def login():
     with open('config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
-        
+
     stauth.Hasher.hash_passwords(config['credentials'])
 
     authenticator = stauth.Authenticate(
@@ -22,13 +22,13 @@ def login():
     authenticator.login()
 
     if st.session_state["authentication_status"]:
-        authenticator.logout(button_name='Sair', location='main', key='main.py')
+        authenticator.logout(button_name='Sair',
+                             location='main', key='main.py')
         st.write(f'Bem Vindo *{st.session_state["name"]}*')
     elif st.session_state["authentication_status"] is False:
         st.error('Usuário/Senha is inválido')
     elif st.session_state["authentication_status"] is None:
         st.warning('Por Favor, utilize seu usuário e senha!')
-
 
 
 def main():
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         initial_sidebar_state="expanded",
     )
     Home = st.Page(page='main.py', title='Home', icon='⚡')
-    Dashboard = st.Page(page='pages/streamlit_app.py',
+    Dashboard = st.Page(page='pages/dashboard.py',
                         title='Dashboard', icon='🧑‍🏫')
     Membros = st.Page(page='pages/membros.py', title='Membros', icon='🪪')
     Projetos = st.Page(page='pages/Projetos.py', title='Projetos', icon='💵')
