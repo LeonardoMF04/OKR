@@ -47,12 +47,12 @@ if __name__ == "__main__":
         layout="wide",
         initial_sidebar_state="expanded",
     )
-    Home = st.Page(page='main.py', title='Home', icon='⚡')
-    Dashboard = st.Page(page='pages/dashboard.py',
-                        title='Dashboard', icon='🧑‍🏫')
-    Membros = st.Page(page='pages/membros.py', title='Membros', icon='🪪')
-    Projetos = st.Page(page='pages/Projetos.py', title='Projetos', icon='💵')
-    PortalBJ = st.Page(page='pages/PortalBJ.py', title='PortlBJ', icon='📊')
+    Home = st.Page(page="main.py", title="Home", default=True)
+    Dashboard = st.Page(page="pages/dashboard.py",
+                        title="Dashboard")
+    Membros = st.Page(page="pages/membros.py", title="Membros")
+    Projetos = st.Page(page="pages/Projetos.py", title="Projetos")
+    PortalBJ = st.Page(page="pages/PortalBJ.py", title="PortlBJ")
 
     pg = st.navigation(pages=[Home, Dashboard, Membros, Projetos, PortalBJ])
     pg.run()
