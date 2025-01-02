@@ -28,12 +28,17 @@ df_resumido = df.iloc[1:, [df.columns.get_loc(
     col) for col in colunas_desejadas]]
 
 
+
 # Display the summarized data table
 st.dataframe(df_resumido, use_container_width=True)
-
+st.markdown(
+    "<div style='text-align: right;'><a href='https://docs.google.com/spreadsheets/d/1Ne9jgW3gxdcp8GAy4XpMpp255NPM75FVbyIvGAAPLxE/edit?gid=1202155433#gid=1202155433' target='_blank'>Link para a planilha</a></div>",
+    unsafe_allow_html=True
+)
 
 numero_ao_lado_meta = float(df.iloc[4][15])
 numero_ao_lado_total = float(df.iloc[5][15])
+
 
 progresso_meta = (numero_ao_lado_total / numero_ao_lado_meta) * 100
 st.markdown("<h2 style='text-align: center;'>Progresso da Meta do Ano</h2>",
@@ -41,6 +46,8 @@ st.markdown("<h2 style='text-align: center;'>Progresso da Meta do Ano</h2>",
 st.progress(min(progresso_meta, 100) / 100.0)
 
 if progresso_meta > 100:
-    st.markdown(f"<h3 style='text-align: center;'>{progresso_meta:.2f}% de sucesso (excedido)</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center;'>{
+                progresso_meta:.2f}% de sucesso (excedido)</h3>", unsafe_allow_html=True)
 else:
-    st.markdown(f"<h3 style='text-align: center;'>{progresso_meta:.2f}% de sucesso</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: center;'>{
+                progresso_meta:.2f}% de sucesso</h3>", unsafe_allow_html=True)

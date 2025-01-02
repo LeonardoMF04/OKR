@@ -15,6 +15,11 @@ aba_selecionada = st.sidebar.selectbox("Selecione a OKR", abas)
 # Carrega os dados da aba selecionada
 df = conn.read(worksheet=aba_selecionada)
 
+st.markdown(
+            "<div style='text-align: right;'><a href='https://docs.google.com/spreadsheets/d/1Ne9jgW3gxdcp8GAy4XpMpp255NPM75FVbyIvGAAPLxE/edit?gid=1202155433#gid=1202155433' target='_blank'>Link para a planilha</a></div>",
+            unsafe_allow_html=True
+        )
+
 st.markdown("<h1 style='text-align: center;'>Dashboard de OKR</h1>",
             unsafe_allow_html=True)
 

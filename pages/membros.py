@@ -10,6 +10,7 @@ if not st.session_state.authentication_status:
 conn = st.connection("gsheets", type=GSheetsConnection)
 # Adiciona uma barra lateral para selecionar a aba e o ano
 anos = ["2024", "2025"]
+
 ano_selecionado = st.sidebar.selectbox("Selecione o Ano", anos)
 if st.sidebar.button('Atualizar Planilha'):
     st.sidebar.success("Planilha atualizada com sucesso!")
@@ -31,17 +32,22 @@ with col1:
     st.title("Membros da Empresa")
 
 with col2:
-    st.write(f"<div style='text-align: right;'>{len(df)
-                                                } membros atuais</div>", unsafe_allow_html=True)
+    with col2:
+        st.write(f"<div style='text-align: right;'>{len(df)} membros atuais</div>", unsafe_allow_html=True)
+        # Link para a planilha
+        st.markdown(
+            "<div style='text-align: right;'><a href='https://docs.google.com/spreadsheets/d/1Ne9jgW3gxdcp8GAy4XpMpp255NPM75FVbyIvGAAPLxE/edit?gid=1202155433#gid=1202155433' target='_blank'>Link para a planilha</a></div>",
+            unsafe_allow_html=True
+        )
 
 
 # Campo de busca
 nome_pesquisa = st.text_input("Buscar membro")
 
 # Filtrar membros com base na busca
-# Filtrar membros com base na busca, ignorando a primeira linha (cabeçalho)
-membros_filtrados = df[1:][df[1:][0].str.contains(
-    nome_pesquisa, case=False, na=False)] if nome_pesquisa else df[1:]
+# Filtrar membros com base na busca
+membros_filtrados = df[df['Nome Completo'].str.contains(
+    nome_pesquisa, case=False, na=False)] if nome_pesquisa else df
 
 # Exibir membros
 for index, row in membros_filtrados.iterrows():
