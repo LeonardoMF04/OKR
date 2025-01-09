@@ -3,5 +3,4 @@ pyyaml
 streamlit_authenticator
 plotly.express
 st-gsheets-connection
-calendar
 pandas
