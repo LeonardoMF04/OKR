@@ -1,5 +1,6 @@
 import streamlit as st
 import calendar
+import pandas as pd
 
 st.title("Calendário EJEET")
 year = 2025
@@ -30,6 +31,10 @@ for month in range(1, 12 + 1):
     cal = calendar.monthcalendar(year, month)
     cal, desc_list = add_descriptions(cal, month)
     st.header(calendar.month_name[month])
-    st.table(cal)
+    
+    # Cria um DataFrame com os dias da semana como colunas
+    df = pd.DataFrame(cal, columns=["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"])
+    st.table(df)
+    
     for desc in desc_list:
         st.write(desc)
