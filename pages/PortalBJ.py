@@ -7,6 +7,7 @@ if not st.session_state.authentication_status:
 # Títulos
 st.title("Painel de Indicadores da EJ")
 
+
 # Colunas para organização
 col1, col2, col3 = st.columns(3)
 
@@ -28,6 +29,6 @@ with col3:
     st.metric(label="% de Membros minorizados", value="45%", delta="100%")
     st.metric(label="Nº de Soluções Inovadoras", value="1", delta="100%")
     st.metric(label="NPS", value="100", delta="125%")
-
+    
 # Estilo básico com barra de progresso
 st.progress(100)  # Exemplo para uma barra de progresso
